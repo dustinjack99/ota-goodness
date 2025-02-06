@@ -14,7 +14,6 @@ export class PostgresDatabase implements DatabaseInterface {
       host: process.env.POSTGRES_HOST,
       port: parseInt(process.env.POSTGRES_PORT ?? '5432', 10),
     });
-    console.log('pool', this.pool);
   }
 
   async getReleaseByPath(path: string): Promise<Release | null> {
